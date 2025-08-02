@@ -24,6 +24,7 @@ services:
     image: judge0/judge0:latest
     command: ["./scripts/workers"]
     volumes:
+      - ./box:/box  
       - /var/local/lib/isolate:/var/local/lib/isolate
     privileged: true
     <<: *default-logging
